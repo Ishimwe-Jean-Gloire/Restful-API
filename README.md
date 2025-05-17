@@ -1,2 +1,5 @@
-# Restful-API
-A simple CRUD Resftful API with javascript server
+
+Restful-API
+
+Restful Api application for CRUD operation using GET POST PUT and DELETE endpoints.
+
