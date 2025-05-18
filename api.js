@@ -111,10 +111,10 @@ const server = http.createServer((req, res) => {
     const id=parseInt(req.url.split("/")[3]);
     const initialLength=students.length;
     students=students.filter(s=>s.id!==id);
-    fs.writeFileSync("students.json",JSON.stringify(students,null,2));
+   
     
     try{
-        if(students.length===initialLength){
+        if(students.length===initialLength){           
           res.status=404;
           res.setHeader('Content-Type','application/json');
           res.end(JSON.stringify({message:"Student not found"}));
