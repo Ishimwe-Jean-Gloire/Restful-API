@@ -10,7 +10,7 @@ try {
   const data=fs.readFileSync("students.json","utf8");
   students=JSON.parse(data);
 } catch (error) {
-console.error("Failed to load students: ",error);  
+console.error("Failed to load students : ",error);  
 }
 const server = http.createServer((req, res) => {
   if ((req.url === "/api/students") & (req.method === "GET")) {
