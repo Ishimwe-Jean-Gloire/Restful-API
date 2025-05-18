@@ -113,7 +113,9 @@ const server = http.createServer((req, res) => {
     students=students.filter(s=>s.id!==id);
    
     
+    
     try{
+      fs.writeFileSync("students.json",JSON.stringify(students,null,2));
         if(students.length===initialLength){           
           res.status=404;
           res.setHeader('Content-Type','application/json');
